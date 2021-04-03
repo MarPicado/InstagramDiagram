@@ -19,7 +19,7 @@ class User(Base):
 class Post(Base):
     __tablename__ = 'post'
     id = Column(Integer, primary_key=True)
-    user_id = Column(Integer)
+    user_id = Column(Integer, ForeignKey('user.id'))
 
 class Follower(Base):
     __tablename__ = 'follower'
